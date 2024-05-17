@@ -5,9 +5,9 @@ while True:
 
     flag = True
     while flag:
-        num = input('Type a number for an upper bound:  ')
+        num = input('Type a number for an upper bound:  ')  #message received by the user
 
-        if num.isdigit():
+        if num.isdigit():   #checks if the input is a digit
             print("Let's play!")
             num = int(num)
             flag = False
@@ -16,13 +16,13 @@ while True:
             print('invalid input!  Try again')  
 
 
-
-    secret = random.randint(1, num)
+#the logic of the program starts from here
+    secret = random.randint(1, num) #thw secret function randomly chooses a number between 1 and the number given by the user.
 
     guess = None
     count = 1
-
-    while guess != secret:
+#execution
+    while guess != secret: 
         guess = input('Please type a number between 1 and ' + str(num) + ": ")
 
         if guess.isdigit():
@@ -42,5 +42,6 @@ while True:
             count += 1  
     else:
           
-     print('It took you' , count, 'guesses')          
+     print('It took you' , count, 'guesses')  
+             
 
